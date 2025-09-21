@@ -1,0 +1,9 @@
+{
+  "output_path": "output/results.json",
+  "default_query": "fetch_employees",
+  "queries": {
+    "fetch_users": "SELECT user_id, login_name FROM users WHERE status = 'ACTIVE'",
+    "fetch_logins": "SELECT username, email FROM user_logins WHERE active = 1 AND ROWNUM <= :limit",
+    "fetch_employees": "SELECT * FROM employees WHERE ROWNUM <= :limit"
+  }
+}
